@@ -1,0 +1,17 @@
+<tr>
+  <td>
+    <h4><%= line_item.product.name %></h4>
+  </td>
+  <td>
+    <img class="order-summary" src=<%= line_item.product.image.tiny %>>
+  </td>
+  <td>
+    <p><%= line_item.product.description %></p>
+  </td>
+  <td>
+    <%= line_item.quantity %>
+  </td>
+  <td>
+    <%= humanized_money_with_symbol (line_item.total_price) %>
+  </td>
+<tr>
