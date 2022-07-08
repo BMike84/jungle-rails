@@ -11,10 +11,17 @@
       <button class="soldout">Sold Out</button> 
       <button class="btn" disabled><%= fa_icon "shopping-cart", text: 'Add' %> </button>
     <% else %>
+    <% if current_user %>
       <%= button_to add_item_cart_path(product_id: product.id), class: 'btn sold-btn' ,
       method: :post do %>
         <%= fa_icon "shopping-cart", text: 'Add' %> 
-        <% end %>
-        </div>
+      <% end %>
+    <% else %>
+    <%= button_to '/login', class: 'btn sold-btn' ,
+    method: :post do %>
+      <%= fa_icon "shopping-cart", text: 'Add' %> 
+    <% end %>
+    <% end %>
+  </div>
   <% end %>
 </article>
