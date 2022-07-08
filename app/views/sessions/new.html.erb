@@ -2,8 +2,23 @@
 
 <%= form_tag '/login' do %>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+  <div class="card">
+  <div class="card-body">
+
+    <div class="mb-3">
+      <p>Email</p>
+      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email"  %>
+    </div>
+
+    <div class="mb-3">
+      <p>Password</p>
+      <%= password_field_tag :password, nil, class: "form-control", placeholder: "Enter Password" %>
+    </div>
+
+    <%= submit_tag "Submit", class: "btn btn-success" %>
+
+  </div>
+</div>
+
 
 <% end %>
