@@ -18,6 +18,11 @@
       <%= f.label :Password, { class: "form-label"} %>
       <%= f.password_field :password, { class: "form-control", placeholder: "Enter Password" } %>
     </div>
+    
+    <div class="mb-3">
+      <%= f.label :Confirm_Password, { class: "form-label"} %>
+      <%= f.password_field :password_confirmation, { class: "form-control", placeholder: "Enter Password" } %>
+    </div>
 
     <%= f.submit "Submit", class: "btn btn-success" %>
 
